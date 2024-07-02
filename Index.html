@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mercedes and Dodge Stories 🏎️</title>
+    <style>
+      body {
+        background: linear-gradient(
+          76.8deg,
+          rgb(121, 45, 129) 3.6%,
+          rgb(36, 31, 98) 90.4%
+        );
+      }
+      h1 {
+        text-align: center;
+        color: black;
+      }
+      h2 {
+        text-align: center;
+        border: 1px solid #7d51e8;
+        line-height: 50px;
+        padding: 15px;
+        font-size: 30px;
+        border-radius: 4px;
+      }
+      h3 {
+        font-size: 26px;
+        font-weight: bold;
+        text-decoration: underline;
+        font-style: italic;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        padding: 20px;
+        max-width: 100%;
+        border-radius: 10px;
+      }
+      p {
+        line-height: 1.5;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      a {
+        max-width: 100%;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 18px;
+        text: white;
+        text-decoration: none;
+        display: block;
+        display: inline-block;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-size: 22px;
+        background: #363b4e;
+        color: #c4bbf0;
+        width: 300px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+      .learn-mercedes {
+        margin-top: 10px;
+      }
+      .container {
+        max-height: 600px;
+        margin: 0 auto;
+        padding: 30px 60px;
+      }
+      .footer {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>I love Automotives!</h1>
+      <h2>Especially Mercedes-Benz and Dodge.</h2>
+      <hr />
+      <h3>Mercedes-Benz</h3>
+      <img
+        class="Mercedes"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/119/384/original/Black_Orange_MGTR_JPG.jpg?1710623016"
+        alt="Mercedes Car"
+        width="400"
+      />
+
+      <p>
+        Would you like to know the
+        <span style="color: #a75265">history</span> of Mercedes-benz?
+        <br />
+        <a
+          href="https://www.mercedes-benz.com/en/innovation/milestones/corporate-history/"
+          target="_blank"
+          class="learn-mercedes"
+          ><span style="color: white"> Here is where it all started!</span>
+        </a>
+      </p>
+
+      <hr />
+
+      <h3>Dodge - Chrysler</h3>
+      <img
+        class="Dodge"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/119/385/original/Black_Red_DC_JPG.jpg?1710623027"
+        alt="Dodge Car"
+        width="400"
+      />
+
+      <p>
+        Or, the origin story of Dodge?
+        <br />
+        <a
+          href="https://www.motorcities.org/story-of-the-week/2019/remembering-the-famous-dodge-brothers-a-brief-history"
+          target="_blank"
+          class="learn-dodge"
+          ><span style="color: #ffffff"> Learn about the Dodge Brothers!</span>
+        </a>
+      </p>
+
+      <hr />
+
+      <h3>DaimlerChrysler AG Merger</h3>
+      <p>
+        At one point, Dodge (<em>specifically, Chrysler</em>) and Mercedes
+        collaborated on vehicle design and production until 2007, fully severing
+        any remaining ties in 2009.
+        <br />
+        "Taking advancing globalisation into account, among other things car
+        production was taken up in Tuscaloosa in 1995, and in 1998 the merger
+        with Chrysler Corporation to form DaimlerChrysler AG was announced. The
+        intention of the merger was to safeguard the long-term competitiveness
+        of the companies involved."
+        <br />
+        <a
+          href="https://group.mercedes-benz.com/company/tradition/company-history/1995-2007.html"
+          target="_blank"
+          class="daimler-chrysler"
+          ><span style="color: white"
+            >History of the DaimlerChrysler AG Merger</span
+          ></a
+        >
+      </p>
+
+      <button class="favorite-button">
+        <strong>Pick your favorite!</strong>
+      </button>
+
+      <p class="footer">
+        This page was built by
+        <a
+          href="https://github.com/dscottyoung2022"
+          target="_blank"
+          class="learn-daniella"
+          ><span style="color: white"> Daniella Scott-Young</span>
+        </a>
+      </p>
+    </div>
+    <script>
+      function favorite() {
+        let car = prompt("Which story interested you the most?");
+        let name = prompt("What is your name?");
+
+        car = car.toLowerCase().trim();
+        name = name.toLowerCase().trim();
+
+        if (car === "mercedes") {
+          alert("Lets cruise in style, " + name + ". Yay!");
+        } else {
+          if (car === "dodge") {
+            alert("We are out to the races, " + name + ". Lets go!");
+          }
+        }
+      }
+
+      let favoriteButton = document.querySelector(".favorite-button");
+      favoriteButton.addEventListener("click", favorite);
+    </script>
+  </body>
+</html>
